@@ -15,8 +15,11 @@
 		"@types/react-dom": "^16.9.0",
 		"@types/server-destroy": "^1.0.0",
 		"@types/styled-components": "^5.0.1",
+		"concurrently": "^5.1.0",
+		"cross-env": "^7.0.2",
 		"express": "^4.17.1",
 		"mongoose": "^5.9.4",
+		"nodemon": "^2.0.2",
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0",
 		"react-scripts": "3.4.0",
@@ -25,10 +28,14 @@
 		"typescript": "~3.7.2"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"start": "yarn run build:dev && yarn run server:dev && react-scripts start",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"clean": "rimraf dist out .webpack",
+		"server:dev:watch-build": "tsc -w -p src/server",
+		"server:dev:watch-server": "nodemon -L -e js --watch dist/server --watch src/server --delay 2 dist/server/index.js",
+		"server:dev": "cross-env NODE_ENV=development BUILD_ENV=development concurrently -k -p '[{name}]' -n 'TypeScript,Node' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev:watch-build\" \"yarn run server:dev:watch-server\"",
+		"build:dev": "yarn run clean && tsc"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
