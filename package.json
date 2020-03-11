@@ -37,7 +37,7 @@
 		"server:dev:watch-build": "tsc -w -p src/server",
 		"server:dev:watch-server": "nodemon -L -e js --watch dist/server --watch src/server --delay 2 dist/server/index.js",
 		"server:dev": "cross-env NODE_ENV=development BUILD_ENV=development concurrently -k -p '[{name}]' -n 'TypeScript,Node' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev:watch-build\" \"yarn run server:dev:watch-server\"",
-		"build:dev": "yarn run clean && tsc"
+		"build:dev": "yarn run clean && tsc --noEmit false --module commonjs"
 	},
 	"eslintConfig": {
 		"extends": "react-app"

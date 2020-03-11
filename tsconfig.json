@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"skipLibCheck": true,
 		"target": "es5",
-		"module": "commonjs",
+		"module": "esnext",
 		"jsx": "react",
 		"outDir": "./dist",
 		"strict": true,
@@ -17,10 +17,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"moduleResolution": "node",
 		"isolatedModules": true,
-		"noEmit": false,
-		"paths": {
-			"~/*": ["*"]
-		}
+		"noEmit": true
 	},
 	"include": ["src/**/*"]
 }
