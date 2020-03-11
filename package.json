@@ -28,7 +28,9 @@
 		"typescript": "~3.7.2"
 	},
 	"scripts": {
-		"start": "yarn run build:dev && yarn run server:dev && react-scripts start",
+		"start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev\" \"yarn run react:start\"",
+		"start2": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev\"",
+		"react:start": "react-scripts start",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"clean": "rimraf dist out .webpack",
