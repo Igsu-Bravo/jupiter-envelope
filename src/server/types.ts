@@ -1,5 +1,5 @@
 enum EApiPath {
-	eventsPath = "/api/v1/event/"
+  eventsPath = '/api/v1/event/',
 }
 
 export { EApiPath };

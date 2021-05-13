@@ -1,3 +1,3 @@
-import eventsModel from "events";
+import eventsModel from 'events';
 
 export { eventsModel };
