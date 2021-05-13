@@ -1,22 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Header from './components/Header';
 
-const MainApp = styled.div`
-  text-align: center;
-`;
-
-function App() {
+const App = (): React.ReactElement => {
   return (
-    <MainApp>
+    <main>
       <Header title="Jupiter">
         <p>
           Somebody <code>once/ToldMe.tsx</code> the world is gonna roll me.
         </p>
       </Header>
-    </MainApp>
+    </main>
   );
-}
+};
 
 export default App;
