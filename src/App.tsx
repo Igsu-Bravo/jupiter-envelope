@@ -3,13 +3,27 @@ import Header from './components/Header';
 
 const App = (): React.ReactElement => {
   return (
-    <main>
-      <Header title="Jupiter">
-        <p className="p-6 items-center justify-center">
+    <div className="bg-main min-h-screen">
+      <Header title="J u p i t e r"></Header>
+      <main className="bg-white rounded-sm m-5">
+        <div className="container mx-auto bg-grayLight rounded-sm m-3">
+          <p>form here</p>
+        </div>
+        <div className="container mx-auto  bg-grayLight rounded-sm m-3">
+          <ul className="list-disc m-2">
+            <li>Una vez</li>
+            <li>Le prregunte a mi gato</li>
+            <li>Que cuantas patas tiene</li>
+          </ul>
+        </div>
+        <p>
           Somebody <code>once/ToldMe.tsx</code> the world is gonna roll me.
         </p>
-      </Header>
-    </main>
+      </main>
+      <footer className="bg-white rounded-sm m-5">
+        <p>This is the footer</p>
+      </footer>
+    </div>
   );
 };
 

@@ -17,7 +17,9 @@ interface IProps {
 
 const Header: React.FC<IProps> = ({ children, title }) => (
   <header>
-    <h1 className="p-6 items-center justify-center">{title}</h1>
+    <h1 className="p-6 text-6xl text-white items-center justify-center">
+      {title}
+    </h1>
     {children}
   </header>
 );
