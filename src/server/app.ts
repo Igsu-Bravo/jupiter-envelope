@@ -1,8 +1,8 @@
-import express from 'express';
+import express, { Express } from 'express';
 import { createRouter } from './router';
 import { EApiPath } from './types';
 
-const createApp = () => {
+const createApp = (): Express => {
   const app = express();
 
   const router = createRouter();
