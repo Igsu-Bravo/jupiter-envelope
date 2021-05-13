@@ -1,14 +1,14 @@
-import express from "express";
+import express from 'express';
 
 // This function returns an express router with the defined routes when called
 const createRouter = () => {
-	const router = express.Router();
+  const router = express.Router();
 
-	router.get("/status", (req, res) => {
-		res.sendStatus(200);
-	});
+  router.get('/status', (req, res) => {
+    res.sendStatus(200);
+  });
 
-	return router;
+  return router;
 };
 
 export { createRouter };
