@@ -6,7 +6,7 @@ const createApp = () => {
   const app = express();
 
   const router = createRouter();
-  app.use(EApiPath.eventsPath, router);
+  app.use(EApiPath.songsPath, router);
 
   return app;
 };
