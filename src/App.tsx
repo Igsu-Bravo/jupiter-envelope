@@ -1,32 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
-import './index.css';
+import Header from './components/Header';
+import SongForm from './components/SongForm';
+import Wave from './assets/Wave';
 
-const MainApp = styled.div`
-  text-align: center;
-`;
-
-const AppHeader = styled.header`
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-`;
-
-function App() {
+const App = (): React.ReactElement => {
   return (
-    <MainApp>
-      <AppHeader>
+    <div className="bg-main min-h-screen">
+      <Header title="J u p i t e r"></Header>
+      <main className="bg-grayLight rounded-sm m-5 py-3 ">
+        <div className="flex flex-wrap">
+          <div className="flex-auto bg-white rounded-sm m-3 p-5">
+            <SongForm />
+          </div>
+          <div className="flex-auto rounded-sm m-3 p-5">
+            <div className="justify-self-center">
+              <Wave />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-wrap bg-white rounded-sm m-3">
+          <ul className="list-disc m-2">
+            <li>Una vez</li>
+            <li>Le prregunte a mi gato</li>
+            <li>Que cuantas patas tiene</li>
+          </ul>
+        </div>
         <p>
           Somebody <code>once/ToldMe.tsx</code> the world is gonna roll me.
         </p>
-      </AppHeader>
-    </MainApp>
+      </main>
+      <footer className="bg-white rounded-sm m-5">
+        <p>This is the footer</p>
+      </footer>
+    </div>
   );
-}
+};
 
 export default App;
