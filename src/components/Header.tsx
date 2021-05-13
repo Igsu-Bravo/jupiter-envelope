@@ -1,11 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 interface IProps {
   title: string;
 }
 
-const AppHeader = styled.header`
+/* const AppHeader = styled.header`
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -14,13 +13,13 @@ const AppHeader = styled.header`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-`;
+`; */
 
 const Header: React.FC<IProps> = ({ children, title }) => (
-  <AppHeader>
-    <h1>{title}</h1>
+  <header>
+    <h1 className="p-6 items-center justify-center">{title}</h1>
     {children}
-  </AppHeader>
+  </header>
 );
 
 export default Header;
