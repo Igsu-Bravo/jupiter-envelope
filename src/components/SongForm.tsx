@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, FormikHelpers } from 'formik';
+import * as Yup from 'yup';
 
 interface IValues {
   songName: string;
@@ -16,6 +17,13 @@ const SongForm = (): React.ReactElement => {
     location: '',
   };
 
+  const songFormValidationSchema = Yup.object().shape({
+    songName: Yup.string().required(),
+    description: Yup.string().required(),
+    isDone: Yup.bool().required(),
+    location: Yup.string().required(),
+  });
+
   const handleSubmit = (
     values: IValues,
     { setSubmitting }: FormikHelpers<IValues>
@@ -26,52 +34,73 @@ const SongForm = (): React.ReactElement => {
     }, 500);
   };
 
+  const getBorderColor = (
+    e: string | undefined,
+    t: boolean | undefined
+  ): string => (e && t ? 'border-red' : 'border-accentMain');
+
   return (
-    <Formik initialValues={formInitialValues} onSubmit={handleSubmit}>
-      <Form className="grid justify-items-left">
-        <label htmlFor="songName">Song name:</label>
-        <Field
-          className="border-accentMain border-4 rounded-full p-3 my-5"
-          id="songName"
-          name="songName"
-          placeholder="Cancioncilla"
-        />
-
-        <label htmlFor="description">Description:</label>
-        <Field
-          className="border-accentMain border-4 rounded-full p-3 my-5"
-          id="description"
-          name="description"
-          placeholder="Muy wena"
-        />
-
-        <label htmlFor="isDone">
-          Done?
+    <Formik
+      initialValues={formInitialValues}
+      onSubmit={handleSubmit}
+      validationSchema={songFormValidationSchema}
+    >
+      {({ errors, touched }) => (
+        <Form className="grid justify-items-left">
+          <label htmlFor="songName">Song name:</label>
           <Field
-            className="my-5 mx-3 justify-self-start"
-            type="checkbox"
-            id="isDone"
-            name="isDone"
+            className={`${getBorderColor(
+              errors.songName,
+              touched.songName
+            )} border-4 rounded-lg p-3 my-5`}
+            id="songName"
+            name="songName"
+            placeholder="Cancioncilla"
           />
-        </label>
 
-        <label htmlFor="location">Location:</label>
-        <Field
-          className="border-accentMain border-4 rounded-full p-3 my-5"
-          id="location"
-          name="location"
-          placeholder="/por/a/qui"
-        />
+          <label htmlFor="description">Description:</label>
+          <Field
+            className={`${getBorderColor(
+              errors.description,
+              touched.description
+            )} border-4 rounded-lg p-3 my-5`}
+            id="description"
+            component="textarea"
+            name="description"
+            placeholder="Muy wena"
+          />
 
-        <div className="flex-shrink-0 m-1">
-          <button
-            className="bg-accentMain rounded px-5 py-1 text-white"
-            type="submit"
-          >
-            Save
-          </button>
-        </div>
-      </Form>
+          <label htmlFor="isDone">
+            Done?
+            <Field
+              className="my-5 mx-3 justify-self-start"
+              type="checkbox"
+              id="isDone"
+              name="isDone"
+            />
+          </label>
+
+          <label htmlFor="location">Location:</label>
+          <Field
+            className={`${getBorderColor(
+              errors.location,
+              touched.location
+            )} border-4 rounded-lg p-3 my-5`}
+            id="location"
+            name="location"
+            placeholder="/por/a/qui"
+          />
+
+          <div className="flex-shrink-0 m-1">
+            <button
+              className="bg-accentMain rounded px-5 py-1 text-white"
+              type="submit"
+            >
+              Save
+            </button>
+          </div>
+        </Form>
+      )}
     </Formik>
   );
 };
