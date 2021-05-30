@@ -2,6 +2,8 @@ import React from 'react';
 import { Formik, Form, Field, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 
+import Button from 'components/Button';
+
 interface IValues {
   songName: string;
   description: string;
@@ -45,7 +47,7 @@ const SongForm = (): React.ReactElement => {
       onSubmit={handleSubmit}
       validationSchema={songFormValidationSchema}
     >
-      {({ errors, touched }) => (
+      {({ errors, touched, isValid }) => (
         <Form className="grid justify-items-left">
           <label htmlFor="songName">Song name:</label>
           <Field
@@ -92,12 +94,9 @@ const SongForm = (): React.ReactElement => {
           />
 
           <div className="flex-shrink-0 m-1">
-            <button
-              className="bg-accentMain rounded px-5 py-1 text-white"
-              type="submit"
-            >
+            <Button type="submit" disabled={!isValid}>
               Save
-            </button>
+            </Button>
           </div>
         </Form>
       )}
