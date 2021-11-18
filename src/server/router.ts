@@ -15,6 +15,10 @@ const createRouter = (): Router => {
           name: 'song 2',
           description: 'something even better',
         },
+        {
+          name: 'song 3',
+          description: 'something',
+        },
       ],
     });
   });

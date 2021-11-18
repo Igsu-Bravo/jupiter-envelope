@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import SongForm from './components/SongForm';
-import Wave from './assets/Wave';
 
 const App = (): React.ReactElement => {
   return (
@@ -14,7 +13,7 @@ const App = (): React.ReactElement => {
           </div>
           <div className="flex-auto rounded-sm m-3 p-5">
             <div className="justify-self-center">
-              <Wave />
+              <p>list here</p>
             </div>
           </div>
         </div>
@@ -25,9 +24,6 @@ const App = (): React.ReactElement => {
             <li>Que cuantas patas tiene</li>
           </ul>
         </div>
-        <p>
-          Somebody <code>once/ToldMe.tsx</code> the world is gonna roll me.
-        </p>
       </main>
       <footer className="bg-white rounded-sm m-5">
         <p>This is the footer</p>
