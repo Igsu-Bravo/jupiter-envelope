@@ -14,16 +14,15 @@ const App = (): React.ReactElement => {
           <div className="flex-auto rounded-sm m-3 p-5">
             <div className="justify-self-center">
               <p>list here</p>
+              <ul className="list-disc m-2">
+                <li>Una vez</li>
+                <li>Le prregunte a mi gato</li>
+                <li>Que cuantas patas tiene</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap bg-white rounded-sm m-3">
-          <ul className="list-disc m-2">
-            <li>Una vez</li>
-            <li>Le prregunte a mi gato</li>
-            <li>Que cuantas patas tiene</li>
-          </ul>
-        </div>
+        <div className="flex flex-wrap bg-white rounded-sm m-3"></div>
       </main>
       <footer className="bg-white rounded-sm m-5">
         <p>This is the footer</p>
