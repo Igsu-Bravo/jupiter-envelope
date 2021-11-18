@@ -25,6 +25,8 @@
     "formik": "^2.2.6",
     "mongoose": "^5.9.4",
     "nodemon": "^2.0.2",
+    "overmind": "^28.0.1",
+    "overmind-react": "^29.0.1",
     "postcss": "^8",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
