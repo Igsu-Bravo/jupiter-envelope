@@ -1,5 +1,6 @@
 import axios from 'axios';
+import { ISong } from './types';
 
 export const api = {
-  getSongs: (): Promise<string> => axios.get('/api/1v/songs'),
+  getSongs: (): Promise<ISong[]> => axios.get('/api/1v/songs'),
 };
