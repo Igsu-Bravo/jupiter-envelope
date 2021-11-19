@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Header';
+import { Header, Footer } from './components';
 import SongForm from './components/SongForm';
 
 const App = (): React.ReactElement => {
@@ -22,11 +22,8 @@ const App = (): React.ReactElement => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap bg-white rounded-sm m-3"></div>
       </main>
-      <footer className="bg-white rounded-sm m-5">
-        <p>This is the footer</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
