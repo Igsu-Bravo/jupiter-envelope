@@ -57,7 +57,7 @@ const SongForm = (): React.ReactElement => {
             )} border-4 rounded-lg p-3 my-5`}
             id="songName"
             name="songName"
-            placeholder="Cancioncilla"
+            placeholder="Lorem ipsum"
           />
 
           <label htmlFor="description">Description:</label>
@@ -69,7 +69,7 @@ const SongForm = (): React.ReactElement => {
             id="description"
             component="textarea"
             name="description"
-            placeholder="Muy wena"
+            placeholder="Dolor sit amet"
           />
 
           <label htmlFor="isDone">
