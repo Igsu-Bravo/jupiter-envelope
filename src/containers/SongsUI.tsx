@@ -1,5 +1,5 @@
 import React from 'react';
-import { SongForm } from 'components';
+import { SongForm, SongList } from 'components';
 
 const SongsUI = (): React.ReactElement => {
   return (
@@ -11,11 +11,7 @@ const SongsUI = (): React.ReactElement => {
         <div className="flex-auto rounded-sm m-3 p-5">
           <div className="justify-self-center">
             <p>list here</p>
-            <ul className="list-disc m-2">
-              <li>Una vez</li>
-              <li>Le prregunte a mi gato</li>
-              <li>Que cuantas patas tiene</li>
-            </ul>
+            <SongList />
           </div>
         </div>
       </div>

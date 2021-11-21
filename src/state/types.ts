@@ -3,7 +3,6 @@ interface ISong {
   description: string;
   isDone: boolean;
 }
-
 interface IState {
   songs: Array<ISong>;
 }

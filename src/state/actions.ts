@@ -1,5 +1,9 @@
 import { Context } from 'state';
 
 export const loadSongs = async ({ state, effects }: Context): Promise<void> => {
-  state.songs = await effects.api.getSongs();
+  try {
+    state.songs = (await effects.api.getSongs()).data;
+  } catch (error: unknown) {
+    console.log('ERROR!', error);
+  }
 };

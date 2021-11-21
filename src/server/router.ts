@@ -5,8 +5,10 @@ const createRouter = (): Router => {
   const router = express.Router();
 
   router.get('/', (_, res) => {
-    res.status(200).send({
-      songs: [
+    res
+      .header('Access-Control-Allow-Origin', '*')
+      .status(200)
+      .send([
         {
           name: 'song 1',
           description: 'something',
@@ -19,8 +21,7 @@ const createRouter = (): Router => {
           name: 'song 3',
           description: 'something',
         },
-      ],
-    });
+      ]);
   });
 
   return router;
