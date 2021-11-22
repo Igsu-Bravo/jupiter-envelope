@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Jupiter Backend",
+  "main": "index.ts",
+  "repository": "https://github.com/Igsu-Bravo/jupiter-envelope",
+  "author": "Igsu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
