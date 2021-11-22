@@ -7,6 +7,9 @@
   "author": "Igsu",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/express": "^4.17.13",
+    "@types/server-destroy": "^1.0.1",
+    "express": "^4.17.1",
+    "server-destroy": "^1.0.1"
   }
 }
