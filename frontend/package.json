@@ -8,7 +8,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@types/express": "^4.17.11",
     "@types/jest": "^24.0.0",
     "@types/mongoose": "^5.7.4",
     "@types/node": "^12.0.0",
@@ -24,7 +23,6 @@
     "eslint-config-prettier": "^8.3.0",
     "formik": "^2.2.6",
     "mongoose": "^5.9.4",
-    "nodemon": "^2.0.2",
     "overmind": "^28.0.1",
     "overmind-react": "^29.0.1",
     "postcss": "^8",
@@ -38,7 +36,6 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev\" \"yarn run craco start\"",
     "react:start": "react-scripts start",
     "test": "craco test",
     "eject": "react-scripts eject",
