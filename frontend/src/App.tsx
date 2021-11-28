@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, Footer } from './components';
-import { SongsUI } from 'containers';
+import { SongsUI } from './containers';
 
 const App = (): React.ReactElement => {
   return (

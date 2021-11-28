@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useAppState, useActions } from 'state';
+import { useAppState, useActions } from '../state';
 
 const SongList = (): React.ReactElement => {
   const { songs } = useAppState();

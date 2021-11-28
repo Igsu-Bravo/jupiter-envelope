@@ -1,5 +1,5 @@
 import React from 'react';
-import { SongForm, SongList } from 'components';
+import { SongForm, SongList } from '../components';
 
 const SongsUI = (): React.ReactElement => {
   return (
