@@ -6,16 +6,18 @@
   "author": "Igsu",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev\" \"yarn run craco start\"",
+    "start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev\" \"yarn --cwd  \"./frontend\" run craco start\"",
     "build:dev": "yarn run clean && tsc --noEmit false --module commonjs",
     "clean": "rimraf dist out .webpack",
-    "server:dev:watch-build": "tsc -w -p /server",
+    "server:dev:watch-build": "tsc -w -p ./server",
     "server:dev:watch-server": "nodemon -L -e js --watch /server --watch /server --delay 2 server/index.ts",
     "server:dev": "cross-env NODE_ENV=development BUILD_ENV=development concurrently -k -p '[{name}]' -n 'TypeScript,Node' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev:watch-build\" \"yarn run server:dev:watch-server\""
   },
   "dependencies": {
     "concurrently": "^6.4.0",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
   },
   "devDependencies": {
