@@ -1,0 +1,7 @@
+# MongoDB
+export MONGO_ROOT_USER=
+export MONGO_ROOT_PASSWORD=
+
+# Mongo-express
+export MONGOEXPRESS_LOGIN=
+export MONGOEXPRESS_PASSWORD=
