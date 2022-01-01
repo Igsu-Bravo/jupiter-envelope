@@ -14,7 +14,7 @@ Make sure you're on the right Node version:
 $ nvm use
 ```
 
-Install them dependencies
+Install them dependencies:
 
 ```console
 $ yarn install
