@@ -8,7 +8,7 @@ This project was _partly_ bootstrapped with [Create React App](https://github.co
 
 Run both frontend and backend with one command:
 
-```bash
+```console
 $ yarn start
 ```
 
@@ -30,14 +30,14 @@ Run `docker compose up --build` will spawn a MongoDB server and an admin UI at `
 
 Build the frontend image:
 
-```bash
+```console
 $ cd frontend
 $ docker build . -t jupiter/frontend
 ```
 
 Create a container and start the container:
 
-```bash
+```console
 $ docker create --name frontend -p 3000:3000 jupiter/frontend && docker start frontend
 ```
 
