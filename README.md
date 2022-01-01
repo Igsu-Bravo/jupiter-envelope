@@ -6,6 +6,20 @@ This project was _partly_ bootstrapped with [Create React App](https://github.co
 
 ## Development setup
 
+This project uses Yarn Workspaces to simplify dependencies... _for now_
+
+Make sure you're on the right Node version:
+
+```console
+$ nvm use
+```
+
+Install them dependencies
+
+```console
+$ yarn install
+```
+
 Run both frontend and backend with one command:
 
 ```console
