@@ -1,4 +1,6 @@
-# J U P I T E R - _this is a vörk in progress_ 🥴🥴
+# J U P I T E R
+
+> _this is a vörk in progress_ 🥴🥴
 
 This project was _partly_ bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
