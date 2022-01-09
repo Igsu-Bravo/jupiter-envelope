@@ -23,3 +23,9 @@ services:
       - ME_CONFIG_BASICAUTH_PASSWORD=${MONGOEXPRESS_PASSWORD}
     ports:
       - '8081:8081'
+  backend:
+    build:
+      context: ./server
+    container_name: jupiter-backend
+    ports:
+      - '8080:8080'
