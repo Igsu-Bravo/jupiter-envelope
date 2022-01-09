@@ -1,24 +1,6 @@
 {
-  "compilerOptions": {
-    "skipLibCheck": true,
-    "target": "es5",
-    "module": "esnext",
-    "jsx": "react-jsx",
-    "outDir": "./dist",
-    "strict": true,
-    "noUnusedLocals": true,
-    "baseUrl": "src",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["frontend/**/*", "server/**/*"]
+  "references": [{ "path": "./frontend" }, { "path": "./server" }],
+  "files": [],
+  "include": [],
+  "exclude": ["**/node_modules"]
 }

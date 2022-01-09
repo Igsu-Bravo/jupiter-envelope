@@ -5,4 +5,4 @@ const config: IConfig = {
   port: parseInt(`${process.env.BACKEND_PORT}`, 10) || 8080,
 };
 
-export default config;
+export { config };

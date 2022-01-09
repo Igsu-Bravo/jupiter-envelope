@@ -1,4 +1,6 @@
 FROM node:alpine
+ENV BACKEND_PORT=$BACKEND_PORT
+ENV BACKEND_HOST=0.0.0.0
 WORKDIR /
 COPY package.json ./
 COPY ./ ./

@@ -8,7 +8,7 @@ const createRouter = (): Router => {
     res
       .header('Access-Control-Allow-Origin', '*')
       .status(200)
-      .send([
+      .json([
         {
           name: 'song 1',
           description: 'something',

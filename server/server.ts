@@ -1,6 +1,6 @@
 import enableDestroy from 'server-destroy';
 import { createApp } from './app';
-import config from 'config';
+import { config } from './config';
 
 // eslint-disable-next-line
 const self = this;

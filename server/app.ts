@@ -10,7 +10,7 @@ const createApp = (): Express => {
   // Simple health check
   app.use(
     router.get('/api/status', (_, res) => {
-      res.send(200);
+      res.sendStatus(200);
     })
   );
 
