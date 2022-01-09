@@ -8,4 +8,4 @@ export MONGOEXPRESS_PASSWORD=
 
 # Backend TODO: add db connection stuff
 export BACKEND_HOST=
-export BACKEN_PORT=
+export BACKEND_PORT=

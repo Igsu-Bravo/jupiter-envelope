@@ -2,4 +2,9 @@ enum EApiPath {
   songsPath = '/api/v1/songs/',
 }
 
-export { EApiPath };
+interface IConfig {
+  host: string;
+  port: number;
+}
+
+export { EApiPath, IConfig };

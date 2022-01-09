@@ -1,20 +1,15 @@
 import enableDestroy from 'server-destroy';
 import { createApp } from './app';
+import config from 'config';
 
 // eslint-disable-next-line
 const self = this;
 
-// TODO: Bring this stuff from config
-enum EWebParams {
-  port = 8080,
-  host = 'localhost',
-}
-
 const createServer = (gracefulShutdown = true): Express.Application => {
   // Create express server and start listening
   const app = createApp();
-  const server = app.listen(EWebParams.port, EWebParams.host, () => {
-    console.log(`Listening on ${EWebParams.host}:${EWebParams.port}`);
+  const server = app.listen(config.port, config.host, () => {
+    console.log(`Listening on ${config.host}:${config.port}`);
   });
 
   enableDestroy(server);
