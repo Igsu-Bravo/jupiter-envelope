@@ -11,7 +11,7 @@
     "server"
   ],
   "scripts": {
-    "start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn --cwd \"./server\" run server:dev\" \"yarn --cwd  \"./frontend\" run craco start\"",
+    "start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn --cwd \"./server\" run server:dev\" \"yarn --cwd  \"./frontend\" NODE_ENV=development un craco start\"",
     "build:dev": "yarn run clean && tsc --noEmit false --module commonjs",
     "clean": "rimraf dist out .webpack"
   },

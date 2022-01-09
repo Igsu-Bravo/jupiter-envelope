@@ -9,3 +9,8 @@ export MONGOEXPRESS_PASSWORD=
 # Backend TODO: add db connection stuff
 export BACKEND_HOST=
 export BACKEND_PORT=
+
+# API
+export REACT_APP_API_HOST=
+export REACT_APP_API_PORT=
+export REACT_APP_API_PATH=
