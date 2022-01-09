@@ -5,3 +5,7 @@ export MONGO_ROOT_PASSWORD=
 # Mongo-express
 export MONGOEXPRESS_LOGIN=
 export MONGOEXPRESS_PASSWORD=
+
+# Backend TODO: add db connection stuff
+export BACKEND_HOST=
+export BACKEN_PORT=
