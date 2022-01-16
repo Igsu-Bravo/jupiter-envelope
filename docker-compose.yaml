@@ -32,6 +32,10 @@ services:
   frontend:
     build:
       context: ./frontend
+      args:
+        REACT_APP_API_HOST: ${REACT_APP_API_HOST}
+        REACT_APP_API_PORT: ${REACT_APP_API_PORT}
+        REACT_APP_API_PATH: ${REACT_APP_API_PATH}
     container_name: jupiter-frontend
     ports:
       - 3000:3000
