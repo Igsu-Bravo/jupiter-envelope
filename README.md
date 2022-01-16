@@ -6,7 +6,7 @@ This project was _partly_ bootstrapped with [Create React App](https://github.co
 
 ## Development setup
 
-This project uses Yarn Workspaces to simplify dependencies... _for now_
+I used Yarn Workspaces to simplify dependencies... _for now_
 
 Make sure you're on the right Node version:
 
@@ -32,13 +32,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-## Docker WIP
+## Docker development
 
 ### Docker compose
 
 Make a copy of `env-sample` and fill in the details as you like.
 
-Run `docker compose up --build` will spawn a MongoDB server and an admin UI at `http://localhost:8081`
+Run `docker compose up --build` and you'll have the full stack (MongoDB, mongo-express, frontend and backend).
+
+Frontend at `http://localhost:3000`
+
+DB admin UI at `http://localhost:8081`
 
 ### Frontend container
 
@@ -55,4 +59,4 @@ Create a container and start the container:
 $ docker create --name frontend -p 3000:3000 jupiter/frontend && docker start frontend
 ```
 
-You should be able to see the app at `http://localhost:3000`
+You should be able to see the app at `http://localhost:3000`. Follow the same steps for backend if you want the containerized version only.
