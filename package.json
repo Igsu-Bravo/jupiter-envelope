@@ -1,74 +1,29 @@
 {
   "name": "jupiter-envelope",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:8080",
-  "dependencies": {
-    "@craco/craco": "^6.1.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/express": "^4.17.11",
-    "@types/jest": "^24.0.0",
-    "@types/mongoose": "^5.7.4",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "@types/server-destroy": "^1.0.1",
-    "@types/styled-components": "^5.0.1",
-    "@types/yup": "^0.29.11",
-    "autoprefixer": "^9",
-    "axios": "^0.24.0",
-    "concurrently": "^5.1.0",
-    "cross-env": "^7.0.2",
-    "eslint-config-prettier": "^8.3.0",
-    "express": "^4.17.1",
-    "formik": "^2.2.6",
-    "mongoose": "^5.9.4",
-    "nodemon": "^2.0.2",
-    "overmind": "^28.0.1",
-    "overmind-react": "^29.0.1",
-    "postcss": "^8",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "4.0.3",
-    "server-destroy": "^1.0.1",
-    "styled-components": "^5.0.1",
-    "stylelint-config-recommended": "^5.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "^4.2.4",
-    "yup": "^0.32.9"
-  },
+  "version": "1.0.0",
+  "description": "Jupiter Monorepo",
+  "repository": "https://github.com/Igsu-Bravo/jupiter-envelope",
+  "author": "Igsu",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
   "scripts": {
-    "start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev\" \"yarn run craco start\"",
-    "react:start": "react-scripts start",
-    "test": "craco test",
-    "eject": "react-scripts eject",
-    "clean": "rimraf dist out .webpack",
-    "server:dev:watch-build": "tsc -w -p src/server",
-    "server:dev:watch-server": "nodemon -L -e js --watch dist/server --watch src/server --delay 2 dist/server/index.js",
-    "server:dev": "cross-env NODE_ENV=development BUILD_ENV=development concurrently -k -p '[{name}]' -n 'TypeScript,Node' -c 'yellow.bold,cyan.bold,green.bold' \"yarn run server:dev:watch-build\" \"yarn run server:dev:watch-server\"",
+    "start": "yarn run build:dev && concurrently -k -p '[{name}]' -n 'TypeScript,React' -c 'yellow.bold,cyan.bold,green.bold' \"yarn --cwd \"./server\" run server:dev\" \"yarn --cwd  \"./frontend\" NODE_ENV=development un craco start\"",
     "build:dev": "yarn run clean && tsc --noEmit false --module commonjs",
-    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx"
+    "clean": "rimraf dist out .webpack"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "concurrently": "^6.4.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
-    "eslint": "^7.11.0"
+    "add": "^2.0.6",
+    "rimraf": "^3.0.2"
   }
 }

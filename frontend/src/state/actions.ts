@@ -1,4 +1,4 @@
-import { Context } from 'state';
+import { Context } from './index';
 
 export const loadSongs = async ({ state, effects }: Context): Promise<void> => {
   try {
